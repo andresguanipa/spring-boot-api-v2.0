@@ -22,10 +22,12 @@ public class UsuarioController {
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
 
         usuario.setPerfil("default.png");
+
         Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
         Rol rol = new Rol();
         rol.setRolId(2L);
+        
         rol.setRolNombre("NORMAL");
 
         UsuarioRol usuarioRol = new UsuarioRol();
